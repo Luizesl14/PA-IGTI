@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@Component
-@FeignClient(name = "authentication", url ="localhost:8080/realms/master")
+@FeignClient(name = "auth", url ="localhost:8080/realms/master")
 public interface Ikeycloak {
 
     @CollectionFormat(feign.CollectionFormat.CSV)
@@ -25,5 +24,5 @@ public interface Ikeycloak {
 
 
     @DeleteMapping(value = "/delete/{id}")
-    ResponseEntity<?> delete(@PathVariable Integer id);
+    ResponseEntity<?> delete(@PathVariable("id") Integer id);
 }

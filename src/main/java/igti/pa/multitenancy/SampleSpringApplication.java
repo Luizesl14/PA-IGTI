@@ -4,7 +4,9 @@ package igti.pa.multitenancy;
 import com.zaxxer.hikari.HikariDataSource;
 import igti.pa.multitenancy.application.tenantconfig.routing.TenantAwareRoutingSource;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -17,6 +19,7 @@ import java.util.Map;
 
 @SpringBootApplication
 @EnableAsync
+@EnableFeignClients
 @EnableScheduling
 @EnableTransactionManagement
 public class SampleSpringApplication {
@@ -34,7 +37,7 @@ public class SampleSpringApplication {
 
 		targetDataSources.put("Kalea", tenantOne());
 		targetDataSources.put("Trinus", tenantTwo());
-		targetDataSources.put("Crediblue", tenantTree());
+		targetDataSources.put("BLUE", tenantTree());
 
 		dataSource.setTargetDataSources(targetDataSources);
 

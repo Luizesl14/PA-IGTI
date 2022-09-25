@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 @RestController
-public class CustomerController {
+public class CustomerResource {
 
     @Autowired
     private ICustomerRepository repository;
