@@ -1,0 +1,52 @@
+version: '3.1'
+services:
+  db-postgres-one:
+    image: postgres
+    container_name: client-one
+    environment:
+      POSTGRES_ROOT_USER: postgres
+      POSTGRES_PASSWORD: 321
+      POSTEGRES_DB: client-one
+    ports:
+      - "5434:5432"
+
+    volumes:
+      - client-one/var/lib/postgres/one
+
+  db-postgres-two:
+    image: postgres
+    container_name: client-two
+    environment:
+      POSTGRES_ROOT_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTEGRES_DB: client-two
+    ports:
+      - "5431:5432"
+
+    volumes:
+      - client-two/var/lib/postgres/two
+
+  db-postgres-tree:
+    image: postgres
+    container_name: client-tree
+    environment:
+      POSTGRES_ROOT_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTEGRES_DB: client-tree
+    ports:
+      - "5430:5432"
+
+    volumes:
+      - client-tree/var/lib/postgres/tree
+
+volumes:
+  client-one:
+  client-two:
+  client-tree:
+
+
+
+
+
+
+
