@@ -1,5 +1,5 @@
 
-package igti.pa.multitenancy.infraestructure.resource;
+package igti.pa.multitenancy.infraestructure.controller;
 
 import igti.pa.multitenancy.application.core.person.PersonService;
 import igti.pa.multitenancy.domain.model.Person;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/person")
-public class PersonResource {
+public class PersonController {
 
     @Autowired
     private PersonService personService;

@@ -1,4 +1,4 @@
-package igti.pa.multitenancy.infraestructure.resource;
+package igti.pa.multitenancy.infraestructure.controller;
 
 import igti.pa.multitenancy.application.core.keycloak.FormDto;
 import igti.pa.multitenancy.application.core.keycloak.KeycloakService;

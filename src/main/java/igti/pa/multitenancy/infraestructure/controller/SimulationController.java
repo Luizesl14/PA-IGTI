@@ -1,5 +1,5 @@
 
-package igti.pa.multitenancy.infraestructure.resource;
+package igti.pa.multitenancy.infraestructure.controller;
 
 import igti.pa.multitenancy.application.core.simulation.SimulationService;
 import igti.pa.multitenancy.domain.model.Simulation;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/simulation")
-public class SimulationResource {
+public class SimulationController {
 
     @Autowired
     private SimulationService simulationService;
